@@ -17,6 +17,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "nanoid": "^3.1.20",
+    "socket.io": "^3.0.4",
     "ts-node": "^9.1.0"
   }
 }
