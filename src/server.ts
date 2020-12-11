@@ -1,4 +1,4 @@
-import IOManager from './io';
+import IOManager from './io.class';
 import app from "./app";
 import http from 'http';
 import SocketIO from 'socket.io';
@@ -10,7 +10,9 @@ const server = http.createServer(app);
 server.listen(app.get('port'));
 
 /**
- * Start SocketIO.
+ * TODO
+ * Start SocketIO. Needed CORS configuration to avoid issues,
+ * the origin should be included in process.ENV to be accordind to the environment
  */
 const options = {
   cors: {
