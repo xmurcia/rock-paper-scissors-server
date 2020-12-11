@@ -5,7 +5,8 @@
   "main": "src/server.ts",
   "scripts": {
     "start": "DEBUG=socket.io:socket nodemon --exec ts-node -- ./src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "author": "Xavi Murcia",
   "license": "ISC",
