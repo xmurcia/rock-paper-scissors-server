@@ -1,3 +1,4 @@
+import { IGame } from './interfaces/game.interface';
 import { Game, Player } from './game';
 import games from './in-memory-game';
 
@@ -69,7 +70,7 @@ class IO {
       });
 
       socket.on('choice', (options, callback) => {
-        const game = games[options.roomId];
+        const game: IGame = games[options.roomId];
 
         game.findPlayer(options.socketId).setChoice(options.choice);
 
@@ -102,7 +103,7 @@ class IO {
    *   forEach room, if the room is not in the games[roomId] --> delete games[roomId]
    */
   private _cleanGames(): void {
-    console.log('Cleaning games...');
+    // console.log('Cleaning games...');
   }
 };
 
