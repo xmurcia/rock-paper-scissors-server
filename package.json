@@ -4,7 +4,7 @@
   "description": "Simple rock paper scissors game using socketIO",
   "main": "src/server.ts",
   "scripts": {
-    "start": "nodemon --exec ts-node -- ./src/server.ts",
+    "start": "DEBUG=socket.io:socket nodemon --exec ts-node -- ./src/server.ts",
     "build": "tsc"
   },
   "author": "Xavi Murcia",
@@ -16,9 +16,9 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
+    "@types/socket.io": "^2.1.12",
     "express": "^4.17.1",
     "http": "0.0.1-security",
-    "nanoid": "^3.1.20",
     "socket.io": "^3.0.4",
     "ts-node": "^9.1.0"
   }
